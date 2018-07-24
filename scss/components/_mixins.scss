@@ -1,0 +1,213 @@
+// Mixin for appearance
+//  .selector {
+//     @include x-appearance(none);
+//   }
+@mixin x-appearance ($value) {
+	-webkit-appearance: $value;
+	-moz-appearance: $value;
+	-ms-appearance: $value;
+	-o-appearance: $value;
+	appearance: $value;
+}
+
+// Mixin for box-sizing
+//  .selector {
+//   @include x-box-sizing(5px 5px 10px 5px #aaa);
+//  }
+//
+@mixin x-box-sizing ($values...) {
+	-webkit-box-sizing: $values;
+	-moz-box-sizing: $values;
+	-ms-box-sizing: $values;
+	box-sizing: $values;
+}
+
+// Mixin for box-shadow
+//  .selector {
+//   @include x-box-shadow(5px 5px 10px 5px #aaa);
+//  }
+//
+@mixin x-box-shadow ($values...) {
+	-webkit-box-shadow: $values;
+	-moz-box-shadow: $values;
+	-ms-box-shadow: $values;
+	box-shadow: $values;
+}
+
+@mixin x-at-least ($device-width) {
+	@media screen and (min-width: $device-width) {
+		@content;
+	}
+}
+
+// Mixin for media query
+// .selector {
+//   @include x-until(40em) { width: 100%; }
+//  }
+@mixin x-until ($device-width) {
+	@media screen and (max-width: $device-width - 0.01) {
+		@content;
+	}
+}
+
+//   .selector {
+//     @include x-breakpoints(mobile,  320px) { width: 100%; }
+//   }
+//
+@mixin x-breakpoints($point, $bp-mobile-width: 640px, $bp-tablet-width: 1024px) {
+	$bp-mobile: '(max-width: #{$bp-mobile-width})';
+	$bp-tablet: '(min-width: #{$bp-mobile-width}) and (max-width: #{$bp-tablet-width})';
+	$bp-desktop: '(min-width: #{$bp-tablet-width})';
+	@if $point==mobile {
+		@media #{$bp-mobile} {
+			@content;
+		}
+	}
+	@else if $point==tablet {
+		@media #{$bp-tablet} {
+			@content;
+		}
+	}
+	@else if $point==desktop {
+		@media #{$bp-desktop} {
+			@content;
+		}
+	}
+	@else {
+		@warn "You are requesting an invalid breakpoint: `#{$point}`.";
+	}
+}
+
+// Mixin for calc 
+//  .selector {
+//    @include x-calc(width, "600px - 2em");
+//  }
+//
+@mixin x-calc ($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: -ms-calc(#{$expression});
+	#{$property}: -o-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+@mixin rotate($degree) {
+	-moz-transform: rotate($degree);
+	-o-transform: rotate($degree);
+	-ms-transform: rotate($degree);
+	-webkit-transform: rotate($degree);
+	transform: rotate($degree);
+}
+
+@mixin scale($value) {
+	-moz-transform: scale($value);
+	-o-transform: scale($value);
+	-ms-transform: scale($value);
+	-webkit-transform: scale($value);
+	transform: scale($value);
+}
+
+@mixin rotate3d($degree) {
+	-moz-transform: rotate3d($degree);
+	-o-transform: rotate3d($degree);
+	-ms-transform: rotate3d($degree);
+	-webkit-transform: rotate3d($degree);
+	transform: rotate3d($degree);
+}
+
+@mixin transition($transition...) {
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transition-property($property...) {
+	-moz-transition-property: $property;
+	-o-transition-property: $property;
+	-webkit-transition-property: $property;
+	transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+	-moz-transition-property: $duration;
+	-o-transition-property: $duration;
+	-webkit-transition-property: $duration;
+	transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+	-moz-transition-timing-function: $timing;
+	-o-transition-timing-function: $timing;
+	-webkit-transition-timing-function: $timing;
+	transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+	-moz-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	-webkit-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+// animation
+@mixin animation($value) {
+	-moz-animation: $value;
+	-o-animation: $value;
+	-webkit-animation: $value;
+	-ms-animation: $value;
+	animation: $value;
+}
+
+@mixin animation-delay($delay...) {
+	-moz-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	-webkit-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+// Mixin for Placeholder
+@mixin x-placeholder {
+	&::-webkit-input-placeholder {
+		@content
+	}
+	&::-moz-placeholder {
+		@content
+	}
+	&:-ms-input-placeholder {
+		@content
+	}
+}
+
+@mixin on-circle($item-count, $circle-size, $item-size) {
+	position: relative;
+	width:  $circle-size;
+	height: $circle-size;
+	padding: 0;
+	border-radius: 50%; 
+	list-style: none;       
+	
+	> * {
+	  display: block;
+	  position: absolute;
+	  top:  50%; 
+	  left: 50%;
+	  width:  $item-size;
+	  height: $item-size;
+	  margin: -($item-size / 2);
+	
+	  $angle: (360 / $item-count);
+	  $rot: 0;
+  
+	  @for $i from 1 through $item-count {
+		&:nth-of-type(#{$i}) {
+		  transform: 
+			rotate($rot * 1deg) 
+			translate($circle-size / 2) 
+			rotate($rot * -1deg);
+		}
+  
+		$rot: $rot + $angle;
+	  }
+	}
+  }

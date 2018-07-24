@@ -1,0 +1,21 @@
+﻿@{
+    string DeploymentPath = ViewBag.DeploymentPath;
+    string Api_URL = ViewBag.Api_URL;
+}
+
+
+<link rel="stylesheet" href= "@string.Format("{0}/css/font-awesome.css", DeploymentPath)" />
+<link rel="stylesheet" href= "@string.Format("{0}/fonts/icons.css", DeploymentPath)"/>
+<link rel="stylesheet" href= "@string.Format("{0}/css/bot.css", DeploymentPath)" />
+<link rel="stylesheet" href= "@string.Format("{0}/css/datanext.css", DeploymentPath)" />
+<link rel="stylesheet" href= "@string.Format("{0}/css/index.css", DeploymentPath)" />
+<link rel="stylesheet" href= "@string.Format("{0}/css/card.css", DeploymentPath)" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div id="root"> 
+</div>
+<script>
+    var Api_URL = "@Api_URL";
+</script>
+<script src= "@string.Format("{0}/dist/polyfill.js", DeploymentPath)" ></script> 
+<script src= "@string.Format("{0}/dist/main.js", DeploymentPath)" ></script> 

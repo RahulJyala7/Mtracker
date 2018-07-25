@@ -2,6 +2,7 @@ import React from 'react';
 import MapContainer from '../map/google_map';
 import TimeLine from './timeline'
 import TimeLine2 from './timeline2'
+import GoogleMapPoint from '../map/googlemap_point'
 
 export default class ViewDataSource extends React.Component {
     constructor(props) {
@@ -82,8 +83,8 @@ export default class ViewDataSource extends React.Component {
                     </div>
                 </div>
 
-                <div className="google_map">
-                    <MapContainer />
+               <div className="google_map">
+        {  this.state.showInfo === true ? <GoogleMapPoint/>  :  <MapContainer />    }
                 </div>
 
             </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, InfoWindow, Marker, GoogleApiWrapper, Polyline, Polygon  } from 'google-maps-react';
 
 export class MapContainer extends Component {
 
@@ -8,6 +8,8 @@ export class MapContainer extends Component {
         activeMarker: {},
         selectedPlace: {},
     };
+
+
 
     onMarkerClick = (props, marker, e) =>
         this.setState({
@@ -32,26 +34,41 @@ export class MapContainer extends Component {
             height: '100vh'
         }
 
+        const triangleCoords = [
+            { lat: 28.628454, lng: 77.376945 },
+            { lat: 28.578766, lng: 77.317421 },
+            { lat:28.603800, lng:  77.366200  }
+        ];
+
+
+        console.log(triangleCoords)
+
         return (
-            <Map style={style} google={this.props.google} zoom={14} initialCenter={{ lat: 28.535517, lng: 77.391029 }}>
-            
-                <Marker
-                    onClick={this.onMarkerClick}
-                    title={'Vehicle Status'}
-                    name={'Vehicle Number UK5256 Heading Toward Mumbai'}
-                    position={{ lat: 19.076025, lng: 72.8777 }} />
-                <Marker
-                    onClick={this.onMarkerClick}
-                    title={'Vehicle Status'}
-                    name={'Vehicle Number UK9656 Heading Toward Delhi'}
-                    position={{ lat: 28.535517, lng: 77.391029 }} />
+            <Map style={style} google={this.props.google} zoom={12}  initialCenter={{ lat: 28.603800 , lng: 77.366200 }}>
 
                 <Marker
                     onClick={this.onMarkerClick}
                     title={'Vehicle Status'}
-                    name={'Vehicle Number MH5652 Heading Toward Gujrat'}
-                    position={{ lat: 28.704123, lng: 77.102529 }} />
+                    name={'Noida Sector 62 , 1 day ago'}
+                    position={{ lat: 28.628454, lng: 77.376945 }} />
+                <Marker
+                    onClick={this.onMarkerClick}
+                    title={'Vehicle Status'}
+                    name={'Noida Sector 16 , 30 Min ago'}
+                    position={{ lat: 28.578766, lng: 77.317421 }} />
 
+                <Marker
+                    onClick={this.onMarkerClick}
+                    title={'Vehicle Status'}
+                    name={'Noida Sector 60 , a min ago'}
+                    position={{ lat: 28.603800, lng: 77.366200 }} />
+                
+                <Polyline
+                        path={triangleCoords}
+                        strokeColor="#00a99d"
+                        strokeOpacity={0.8}
+                        strokeWeight={3}
+                         />
 
                 <InfoWindow
                     marker={this.state.activeMarker}

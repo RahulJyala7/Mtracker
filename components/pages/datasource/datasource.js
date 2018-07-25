@@ -21,8 +21,7 @@ export default class DataSource extends React.Component {
         return (
             <div className="mainDashBoard">
                 <div className="dashboard-pageheader">
-                    <div className="page-header__title">Data Source</div>
-                    {/* <a className="tabList__icon" onClick={this.onAddDataSource} ><i className="addnew fa fa-plus-circle"></i></a> */}
+                    <div className="page-header__title">Vheicle Status</div>
                 </div>
                 <div>
                     {DS}

@@ -10,6 +10,7 @@ import Measures from './measures/measures';
 import IDM from './IDM/idm';
 import Settings from './settings/settings';
 import StrategyBuilder from './strategybuilder/strategybuilder';
+import Alert from './Alerts/alert';
 
 
 export default class AgentConfig extends React.Component {
@@ -70,6 +71,7 @@ export default class AgentConfig extends React.Component {
                     <Route path={`${match.url}/dashboard`} component={HomeDashboard}/>
                     <Route path={`${match.url}/datasource`} component={DataSource}/>
                     <Route path={`${match.url}/viewdataset`} component={DataSet}/>
+                    <Route path={`${match.url}/alerts`} component={Alert} />
                     <Route path={`${match.url}/adddataset`} component={AddDataSet}/>
                     <Route path={`${match.url}/measures`} component={Measures} />
                     <Route path={`${match.url}/IDM`} component={IDM} />

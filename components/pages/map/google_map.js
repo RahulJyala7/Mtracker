@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { relative } from 'path';
 
 export class MapContainer extends Component {
 
@@ -28,8 +29,8 @@ export class MapContainer extends Component {
     render() {
 
         const style = {
-            width: '150vh',
-            height: '100vh'
+            width: '120vh',
+            height: '100vh',
         }
 
         return (

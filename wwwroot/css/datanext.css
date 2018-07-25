@@ -1385,12 +1385,8 @@ a.tablist_meun--nav{
 
 
 .google_map{
-    padding: 0 303px 221px;
-    position: static;
-}
-
-.gd {
-    position: absolute
+    position: absolute;
+    padding-left: 304px;
 }
 
 .google_map_shadow {
@@ -1574,3 +1570,8 @@ background-color: blanchedalmond;
   }
   
 /* TimeLine End Here  */
+
+.flexbox {
+   display: flex;
+   min-height:  100vh
+}

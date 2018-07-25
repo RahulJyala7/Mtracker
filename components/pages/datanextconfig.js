@@ -4,12 +4,7 @@ import Sidebar from '../templates/sidebar';
 import Header from '../templates/header';
 import HomeDashboard from './dashboard/dashboard';
 import DataSource from './datasource/datasource';
-import AddDataSet from './datasource/dataset/adddataset';
-import DataSet from './datasource/dataset/dataset'
-import Measures from './measures/measures';
-import IDM from './IDM/idm';
 import Settings from './settings/settings';
-import StrategyBuilder from './strategybuilder/strategybuilder';
 import Alert from './Alerts/alert';
 
 
@@ -50,9 +45,6 @@ export default class AgentConfig extends React.Component {
         this.setState({ menuClicked: "BotEditor" })
     }
 
-   
-
-
     render() {
         const { match } = this.props;
 
@@ -70,13 +62,8 @@ export default class AgentConfig extends React.Component {
                 <Switch>
                     <Route path={`${match.url}/dashboard`} component={HomeDashboard}/>
                     <Route path={`${match.url}/datasource`} component={DataSource}/>
-                    <Route path={`${match.url}/viewdataset`} component={DataSet}/>
                     <Route path={`${match.url}/alerts`} component={Alert} />
-                    <Route path={`${match.url}/adddataset`} component={AddDataSet}/>
-                    <Route path={`${match.url}/measures`} component={Measures} />
-                    <Route path={`${match.url}/IDM`} component={IDM} />
                     <Route path={`${match.url}/Settings`} component={Settings} />
-                    <Route path={`${match.url}/strategybuilder`} component={StrategyBuilder} />
                 </Switch>
                 </div>
             </div>

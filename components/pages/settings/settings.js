@@ -25,16 +25,19 @@ export default class Settings extends React.Component {
     }
     consignment = [
         {
-            name: "consignment 1",
-            address: "delhi"
+            name: "Heavy Duty",
+            address: "Delhi",
+            icon :"fa fa-archive"
         },
         {
-            name: "consignment 2",
-            address: "Kanpur"
+            name: "Fragile Goods",
+            address: "Kanpur",
+            icon :"fa fa-glass"
         },
         {
-            name: "Consignment 3",
-            address: "Mumbai"
+            name: "Passanger",
+            address: "Mumbai",
+            icon :"fa fa-group"
         }
     ];
 
@@ -42,6 +45,7 @@ export default class Settings extends React.Component {
         {
             vehicleNo: "UP 14 5522",
             consignment: ""
+            
         },
         {
             vehicleNo: "DL 8C 3487",
@@ -53,13 +57,13 @@ export default class Settings extends React.Component {
         }
     ];
     renderConsignment(cons) {
-        return cons.map(e => {
+        return cons.map( (e , i ) => {
             return <div className="hover_list">
                 <div className="dash-cardbox-map google_map_shadow" draggable onDragStart={(ev) => this.onDragStart(ev, e.name)}>
-                    <div className="cardbox__icon cardbox__icon--botsavailable"><i className="fa fa-car"></i></div>
+                    <div className="cardbox__icon cardbox__icon--botsavailable"><i className={e.icon}></i></div>
                     <div className="cardbox__content">
-                        <div className="">Name : {e.name}</div>
-                        <div className="">Address : {e.address}</div>
+                        <div className="">Type : {e.name}</div>
+                        <div className="">Destination : {e.address}</div>
                     </div>
                 </div>
             </div>
@@ -100,6 +104,36 @@ export default class Settings extends React.Component {
         })
         this.setState({ ...this.state, vehicles, dragDone: true });
     }
+   
+     initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map((this.refs.map2), {
+          zoom: 7,
+          center: {lat: 41.85, lng: -87.65}
+        });
+        directionsDisplay.setMap(map);
+
+    
+        this.calculateAndDisplayRoute(directionsService, directionsDisplay);
+
+  
+      }
+
+       calculateAndDisplayRoute = (directionsService, directionsDisplay) => {
+        directionsService.route({
+          origin: "Noida",
+          destination: "Delhi",
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      };  
+    
 
     render() {
         return (

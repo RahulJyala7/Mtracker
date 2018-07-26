@@ -38,7 +38,7 @@ class SideBar extends Component {
 
   render() {
     return (
-      <div className={this.props.sidebarStatus ? "leftPanel" : "leftPanel leftPanelHide"}>
+      <div className={this.props.sidebarStatus ? "leftPanel leftPanelHide" : "leftPanel"}>
         <div id="ToolBoxContainer" className="sideNavContainer">
           <div className="sideNav">
             <ul className="sideNav-list">
@@ -51,7 +51,7 @@ class SideBar extends Component {
               <li className="sideNav-list__item">
                 <NavLink className="list-item__link" to="/trackingconfig/datasource">
                   <i className="list-item__icon fa fa-database"></i>
-                  <span className="list-item__title">Track Team</span>
+                  <span className="list-item__title">Track Fleet</span>
                 </NavLink>
               </li>
               <li className="sideNav-list__item">

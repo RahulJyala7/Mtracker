@@ -1386,13 +1386,14 @@ a.tablist_meun--nav{
 
 .google_map{
     position: absolute;
-    padding-left: 304px;
+    padding-left: 358px;
+    
 }
 
 .google_map_shadow {
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 1);
-    padding-top: 17px;
-    width: 297px;
+    padding-top: 24px;
+    width: 348px;
 }
 
 .hover_list :hover {
@@ -1574,4 +1575,8 @@ a.tablist_meun--nav{
 .flexbox {
    display: flex;
    min-height:  100vh
+}
+
+.icon_padding{
+        padding-right: 10px;
 }

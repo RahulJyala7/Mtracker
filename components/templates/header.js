@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-            <div className={this.props.sidebarStatus ? "logo" : "logo logoshort"}>
-                    <div className="logoicon"><i className="fa fa-cloud-upload"></i></div>
-                    <div className="logotext">MTrack</div>            
+            <div className={this.props.sidebarStatus ? "logo logoshort" : "logo"}>
+                    <div className="logoicon" style={{ paddingTop: '14px'}}  ><img src="../../images/logo_02.png"></img></div>
+                    <div className="logotext">TrackMe</div>
             </div>
         )
     }

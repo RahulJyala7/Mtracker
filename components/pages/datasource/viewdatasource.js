@@ -35,9 +35,14 @@ export default class ViewDataSource extends React.Component {
                         <div className="dash-cardbox-map google_map_shadow" onClick={this.getVheicleDetails}>
                             <div className="cardbox__icon cardbox__icon--botsavailable"><i className="fa fa-car"></i></div>
                             <div className="cardbox__content">
-                                <div>Name : Avinash</div>
-                                <div>Age : 29</div>
-                                <div>Vheicle No : UK5665</div>
+                                <div> <h4>DL 3cp 1859 </h4></div>
+                                <div>Meharouli Badarpur Road,Saket,Delhi</div>
+                                <div>
+                                    <i className="fa fa-key icon_padding"></i>
+                                    <i className="fa fa-asterisk icon_padding"></i>
+                                    <i className="fa fa-battery-half icon_padding"></i>
+                                    <i className="fa fa-wifi icon_padding"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -51,9 +56,14 @@ export default class ViewDataSource extends React.Component {
                         <div className="dash-cardbox-map google_map_shadow" onClick={this.getVheicleDetails}>
                             <div className="cardbox__icon cardbox__icon--botsavailable"><i className="fa fa-car"></i></div>
                             <div className="cardbox__content">
-                                <div>Name : Rahul</div>
-                                <div>Age : 26</div>
-                                <div>Vheicle No : UK7465</div>
+                                <div><h4>MH 16D 2546 </h4></div>
+                                <div>Aaare Dairy Goregaon East,Mumbai</div>
+                                <div>
+                                    <i className="fa fa-key icon_padding"></i>
+                                    <i className="fa fa-asterisk icon_padding"></i>
+                                    <i className="fa fa-battery-half icon_padding"></i>
+                                    <i className="fa fa-wifi icon_padding"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,9 +72,14 @@ export default class ViewDataSource extends React.Component {
                         <div className="dash-cardbox-map google_map_shadow" onClick={this.getVheicleDetails}>
                             <div className="cardbox__icon cardbox__icon--botsavailable"><i className="fa fa-car"></i></div>
                             <div className="cardbox__content">
-                                <div>Name : Shaurabh</div>
-                                <div>Age : 58</div>
-                                <div>Vheicle No : UK9635</div>
+                                <div><h4>UP 16 1585</h4></div>
+                                <div>Indrapuram , Gazhaibad , Uttar Pradesh </div>
+                                <div>
+                                    <i className="fa fa-key icon_padding"></i>
+                                    <i className="fa fa-asterisk icon_padding"></i>
+                                    <i className="fa fa-battery-half icon_padding"></i>
+                                    <i className="fa fa-wifi icon_padding"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -73,12 +88,18 @@ export default class ViewDataSource extends React.Component {
                         <div className="dash-cardbox-map google_map_shadow" onClick={this.getVheicleDetails}>
                             <div className="cardbox__icon cardbox__icon--botsavailable"><i className="fa fa-car"></i></div>
                             <div className="cardbox__content">
-                                <div>Name : Ashish</div>
-                                <div>Age : 31</div>
-                                <div>Vheicle No : UK4565</div>
+                                <div><h4>RJ 8D 4562 </h4></div>
+                                <div>Vaishali Nagar,Jaipur,Rajasthan</div>
+                                <div>
+                                    <i className="fa fa-key icon_padding"></i>
+                                    <i className="fa fa-asterisk icon_padding"></i>
+                                    <i className="fa fa-battery-half icon_padding"></i>
+                                    <i className="fa fa-wifi icon_padding"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <div className="google_map">

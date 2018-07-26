@@ -21,7 +21,7 @@ export default class DataSource extends React.Component {
         return (
             <div className="mainDashBoard">
                 <div className="dashboard-pageheader">
-                    <div className="page-header__title">Vehicle Status</div>
+                    <div className="page-header__title">Live Tracking</div>
                 </div>
                 <div>
                     {DS}

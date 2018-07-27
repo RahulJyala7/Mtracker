@@ -14,8 +14,6 @@ export default class ViewDataSource extends React.Component {
         }
     }
 
-
-
     getDataSet = () => {
         this.props.viewDataset();
     }
@@ -30,7 +28,7 @@ export default class ViewDataSource extends React.Component {
     render() {
         return (
             <div className="flexbox">
-                <div>
+                <div className="list_padding">
                     <div className="hover_list">
                         <div className="dash-cardbox-map google_map_shadow" onClick={this.getVheicleDetails}>
                             <div className="cardbox__icon cardbox__icon--botsavailable"><i className="fa fa-car"></i></div>
@@ -38,10 +36,10 @@ export default class ViewDataSource extends React.Component {
                                 <div> <h4>DL 3cp 1859 </h4></div>
                                 <div>Meharouli Badarpur Road,Saket,Delhi</div>
                                 <div>
-                                    <i className="fa fa-key icon_padding"></i>
-                                    <i className="fa fa-asterisk icon_padding"></i>
-                                    <i className="fa fa-battery-half icon_padding"></i>
-                                    <i className="fa fa-wifi icon_padding"></i>
+                                    <i style={{color :"red"}} className="fa fa-key icon_padding wifi_icon"></i>
+                                    <i style={{color :"green"}} className="fa fa-asterisk icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-battery-half icon_padding"></i>
+                                    <i style={{color :"red"}} className="fa fa-wifi icon_padding"></i>
                                 </div>
                             </div>
                         </div>
@@ -59,10 +57,10 @@ export default class ViewDataSource extends React.Component {
                                 <div><h4>MH 16D 2546 </h4></div>
                                 <div>Aaare Dairy Goregaon East,Mumbai</div>
                                 <div>
-                                    <i className="fa fa-key icon_padding"></i>
-                                    <i className="fa fa-asterisk icon_padding"></i>
-                                    <i className="fa fa-battery-half icon_padding"></i>
-                                    <i className="fa fa-wifi icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-key icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-asterisk icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-battery-half icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-wifi icon_padding"></i>
                                 </div>
                             </div>
                         </div>
@@ -75,10 +73,10 @@ export default class ViewDataSource extends React.Component {
                                 <div><h4>UP 16 1585</h4></div>
                                 <div>Indrapuram , Gazhaibad , Uttar Pradesh </div>
                                 <div>
-                                    <i className="fa fa-key icon_padding"></i>
-                                    <i className="fa fa-asterisk icon_padding"></i>
-                                    <i className="fa fa-battery-half icon_padding"></i>
-                                    <i className="fa fa-wifi icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-key icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-asterisk icon_padding"></i>
+                                    <i style={{color :"red"}} className="fa fa-battery-half icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-wifi icon_padding"></i>
                                 </div>
                             </div>
                         </div>
@@ -91,10 +89,10 @@ export default class ViewDataSource extends React.Component {
                                 <div><h4>RJ 8D 4562 </h4></div>
                                 <div>Vaishali Nagar,Jaipur,Rajasthan</div>
                                 <div>
-                                    <i className="fa fa-key icon_padding"></i>
-                                    <i className="fa fa-asterisk icon_padding"></i>
-                                    <i className="fa fa-battery-half icon_padding"></i>
-                                    <i className="fa fa-wifi icon_padding"></i>
+                                    <i style={{color :"red"}} className="fa fa-key icon_padding"></i>
+                                    <i style={{color :"red"}} className="fa fa-asterisk icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-battery-half icon_padding"></i>
+                                    <i style={{color :"green"}} className="fa fa-wifi icon_padding"></i>
                                 </div>
                             </div>
                         </div>

@@ -1386,7 +1386,8 @@ a.tablist_meun--nav{
 
 .google_map{
     position: absolute;
-    padding-left: 358px;
+    padding-left: 370px;
+    margin-top: 10px
     
 }
 
@@ -1579,4 +1580,9 @@ a.tablist_meun--nav{
 
 .icon_padding{
         padding-right: 10px;
+}
+
+.list_padding{
+    padding-left: 10px;
+    margin-top: 10px;
 }

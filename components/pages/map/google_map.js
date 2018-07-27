@@ -29,7 +29,7 @@ export class MapContainer extends Component {
     render() {
 
         const style = {
-            width: '120vh',
+            width: '100vh',
             height: '100vh',
         }
 
@@ -51,7 +51,8 @@ export class MapContainer extends Component {
                     onClick={this.onMarkerClick}
                     title={'Vehicle Status'}
                     name={'Vehicle Number MH5652 Heading Toward Gujrat'}
-                    position={{ lat: 28.704123, lng: 77.102529 }} />
+                    position={{ lat: 28.704123, lng: 77.102529 }}
+                    />
 
 
                 <InfoWindow

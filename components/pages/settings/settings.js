@@ -142,8 +142,8 @@ export default class Settings extends React.Component {
                     <div className="page-header__title">Geo Allocation</div>
                 </div>
                 <div className="flexbox">
-                    <div>
-                        <div style={{ border: '1px solid gray', marginTop: 10, boxShadow: '1px 1px #bb9f9f' }}>
+                    <div className="list_padding">
+                        <div style={{ border: '1px solid gray',  boxShadow: '1px 1px #bb9f9f' }}>
                             <div><h3 style={{ padding: 5 }}>Consignments</h3></div>
                             {this.renderConsignment(this.consignment)}
                         </div>
